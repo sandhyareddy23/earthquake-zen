@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
+/*
+Custom table component to display based on our UX requirement.
+(Can be further generalized by having a seperate basic Table component and sending the Children prop to display as per custom reqs)
+**/
 const ListTable = ({ tableData, theadData, detailData }) => {
   const navigate = useNavigate();
   const [currentOrder, setCurrentOrder] = useState("asc");

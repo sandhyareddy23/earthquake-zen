@@ -8,6 +8,11 @@ import "./App.scss";
 
 const App = () => {
   const [myData, setMyData] = useState({});
+  /*Fetching the data from public/data.json using axios.
+  we could have just imported the json file and used it, instead of api like call, but thinking of potential usage of external API, used axios)
+  Also This Axios call can be moved further into components based on what kind of data returned and needed by component,
+   instead of passing data from here to child components.
+  **/
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get("./data.json").catch((err) => {
